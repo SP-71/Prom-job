@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ежедневник</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<<!-- script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script> -->
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
+
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/styles.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.structure.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.css">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+</head>
+
+<body>
+	<section id="body" class="width">
+	    <aside id="sidebar" class="column-left">
+			<header>
+				<h1><a href="#index" hrefMain="#main">Ежедневник</a></h1>
+				<h2>Welcome to your Diary!</h2>
+			</header>
+			<nav id="mainnav">
+  				<ul>
+                   	<li class="selected-item"><a href="#index" hrefMain="#main">Home</a></li>
+                	<li><a href="#newEvent" hrefMain="#eventNew">new Event</a></li>
+                	<li><a href="#eventList" hrefMain="#listEvent">Event list</a></li>
+                   	<li><a href="#places" hrefMain="#map-canvas">Where I have been</a></li>
+                </ul>
+			</nav>
+		</aside>
+
+		<section id="content" class="column-right">    		
+	        <article>
+	    	    <div id="main" class="motion formatContent">
+				    Diary - organizer that will help you schedule your affairs, keep a list of important things. View past events. It is also possible to add pictures, drawings, and to celebrate the past and future events on the map. With further Awareness bugs will be fixed and will be added to the function "Alert", which is when an event occurs an audible and visual alert.
+				<p><img src="img/1.png" alt="#index" width ="275px" height="150">
+				<img src="img/2.png" alt="Home" width ="275px" height="150">
+				<img src="img/3.png" alt="New event" width ="275px" height="150">
+				<img src="img/4.png" alt="List of event" width ="275px" height="150">
+			</p>    </div> 	
+			
+		        <div id="eventNew" class="motion formatContent">
+		            <form>
+		    	        <div>
+		    		        <input id="name" type="text" placeholder="Name of event" class="eventName">
+		    	        </div>
+		    	        <div>
+                            Data: <input type="text" id="datepicker">
+		    	        </div>
+		    	        <div id="Img"></div>
+		    	        <div id="addImg">
+		    	 	        <input class="addImg" type="text" placeholder="Add a picture" class="addImg">
+		    	 	        <input data-img="img" class="img" id="button" type="button" value="Прикрепить"><br>
+		    	        </div>
+		    	 	    <div class="format green color" colorInfo="green1"></div>
+		    		    <div class="format red color" colorInfo="red1"></div>
+		    		    <div class="format blue color" colorInfo="blue1"></div>
+		    		    <div class="format aqua color" colorInfo="aqua1"></div>
+		    		    <div class="format black color" colorInfo="black1"></div>
+		    		    <div class="format yellow color" colorInfo="yellow1"></div>
+		    		    <div class="format whitesmoke color" colorInfo="whitesmoke1"></div>
+		    		    <div class="format italic formatText1" texFormatting="italic"><p texFormatting="italic">К</p></div>
+		    		    <div class="format bold formatText1" texFormatting="bold"><p texFormatting="bold">Ж</p></div>
+		    		    <div class="format underline formatText1" texFormatting="underline"><p texFormatting="underline">Ч</p></div>
+		    		    <div>Your attitude towards this event?</div>
+		    		    <div class="format attitude goodnest" attitudeData="goodnest"></div>
+		    		    <div class="format attitude normal" attitudeData="normal"></div>
+		    		    <div class="format attitude bad" attitudeData="bad"></div><br>     	 	
+		        	    <div id="eventText1">
+		    		    <form>
+		    		    <textarea id="eventText" placeholder="Текст события" class=""></textarea>
+		    		    <input name="newEvent" type="button" value="Create Event">
+		    	    </form>
+		   	    </div>
+
+		   	    <div id="createEvent"></div>
+            </form>
+        </div>
+
+        <div id="event1" class="formatContent motion">
+		    <div id="eventHolder"></div>
+		</div>
+
+        <div id="listEvent" class="formatContent motion">
+		   	<div id="sortList">
+		   		<div class="sort"><input data-sortData='sortData' class="img1" type="button"  value="Sort by data"></div>
+		   		<div class="sort"><input dataSortAttitude='sortAttitude' class="img1" type="button" value="Sort by attitude"></div>
+		   		<div class="sort">
+		   			<input id='searchName' type="text" placeholder="Search by name" class="search" >
+		   			<input searchNameData='searchName' class="img1" type="button" value="Search">
+		   		</div>	
+		   	</div>
+
+		   	<div id='list'>
+		   		<ul id='listHolder'></ul>
+		   	</div>
+			   	
+		</div>
+
+			<input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+	 	  	<div id="map-canvas" class="formatContent motion" style="width:600px; height:400px"></div>
+	 	<script type="text/javascript" src="js/google.js"></script>
+	 	<!-- <script type="text/javascript" src="js/google1.js"></script> -->
+	</div>
+</div>
+</article></section></section>
+</body>
+</html>
